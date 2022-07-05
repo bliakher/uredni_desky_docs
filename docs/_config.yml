@@ -20,8 +20,7 @@
 
 title: Úřední desky - dokumentace
 email: evgenia.m.golubeva@gmail.com
-description: >- 
-Dokumentace k aplikaci pro prohlížení úředních desek vytvořené součástí bakalářské práce na MFF UK 2022 
+description: Dokumentace k aplikaci pro prohlížení úředních desek vytvořené součástí bakalářské práce na MFF UK 2022 
 baseurl: "/docs" # the subpath of your site, e.g. /blog
 url: "https://bliakher.github.io/uredni_desky_docs" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
