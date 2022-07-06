@@ -3,10 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-nav_order: 1
 ---
-
-## Úvod
 
 Tato stránka obsahuje dokumentaci k aplikaci na prohlížení úředních desek. Aplikaci najdete [zde](https://bliakher.github.io/uredni_desky/).
 
