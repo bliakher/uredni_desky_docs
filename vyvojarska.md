@@ -89,7 +89,7 @@ Složka validace:
 
 #### Struktura aplikace
 
-Aplikace je navržená jako *single-page application* implementovaná na straně klienta v jazyce TypeScript s použitím frameworku React.
+Aplikace je navržená jako *single-page application* implementovaná na straně klienta v jazyce TypeScript s použitím frameworku React. Aplikace je nasazená na GitHub Pages.
 
 Aplikace má 3 hlavní části.
 
@@ -111,7 +111,7 @@ Datová sada má svoji distribuci, která obsahuje reálná data z úřední des
 
 Třída `BulletinDistribution` obsahuje atributy celé úřední desky a seznam informací, které jsou na ní vyvěšené. Informaci na desce reprezentuje třída `InfoRecord` ze souboru `InfoRecord.ts`. 
 
-Informace na desce má datum vyvěšení a datum relevance, které jsou reprezentované třídou `TimeMoment`. `TimeMoment` odpovídá specifikaci [OFN Časový okamžik](https://ofn.gov.cz/časová-specifikace/2020-07-01/#vazba-časová-specifikace-časový-okamžik), kdy čas může být nespecifikovaný.
+Informace na desce má datum vyvěšení a datum relevance, které jsou reprezentované třídou `TimeMoment`. `TimeMoment` odpovídá specifikaci [OFN Časový okamžik](https://ofn.gov.cz/časová-specifikace/2020-07-01/#vazba-časová-specifikace-časový-okamžik), kdy čas může být neurčený.
 
 Třída `BulletinData` si v sobě drží informace o poskytovateli dat, reprezentované třídou `Provider` ze souboru `Provider.ts`
 
@@ -119,4 +119,21 @@ Třída `DatasetStore` ze souboru `DatasetStore.ts` představuje uložiště, kt
 
 
 ##### Prezentační vrstva a kontroler
+
+Třetí částí je kontrolor a prezenční vrstva. Prezenční vrstva vizualizuje data
+z modelu a vytváří uživatelské rozhraní. Kontrolor na základě podnětů z uživa-
+telského rozhraní vyvolává změny v modely, které se pak promítají do změn ve
+vizualizaci prezenční vrstvy.
+
+Uživatelské rozhraní tvoří React komponenty, které najdeme ve složce `/aplikace/src/pages/`. React komponenty využívají třídu `DatasetStore` z modelu k získání dat z úředních desek reprezentovaných třídou `BulletinData`. 
+
+#### React
+
+Aplikace je implementovaná pomocí frameworku React. React vytváří uživatelské rozhraní pomocí komponent. Komponenty jsou nezávislé jednotky, které si udržují vnitřní stav a umí se vyrenderovat na základě stavu a šablony psané v syntaxi JSX. 
+
+Základní React komponentou v aplikaci je komponenta `App` ze souboru `/aplikace/src/App.tsx`. Tato komponenta v sobě obsahuje router, který popisuje, jaká komponenta uživatelského rozhraní se má vyrenderovat v závislosti na URL, což umožňuje routování v aplikaci.
+
+V aplikaci je pro popis routování použitá React komponenta [`HashRouter`](https://reactrouter.com/docs/en/v6/routers/hash-router), která umožňuje routovaní pomocí fragmentu URL. Tato možnost byla zvolená kvůli tomu, že nasazení pomocí služby GitHub Pages neumožňuje routování pomocí virtuální cesty, které používá komponenta [`BrowserRouter`](https://reactrouter.com/docs/en/v6/routers/browser-router).
+
+
 
