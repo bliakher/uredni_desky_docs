@@ -16,22 +16,24 @@ K sestavení a nasazení je použit správce balíčků [npm](https://www.npmjs.
 *package.json* obsahuje konfiguraci balíčků, se kterými aplikace
 pracuje, a nastavení příkazů pro sestavení a nasazení aplikace.
 
-Sestavení {#sestavení .unnumbered}
----------
+#### Sestavení
 
 Sestavení aplikace v produkční verzi se provede příkazem
 
+```
 npm run build
+```
 
 Výsledek se vygeneruje do složky *build*.
 
-Nasazení {#nasazení .unnumbered}
---------
+#### Nasazení 
 
 Pro nasazení používáme službu [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) a balíček [gh-pages](https://www.npmjs.com/package/gh-pages).
 Nasazení aplikace je možné provést příkazem
 
+```
 npm run deploy
+```
 
 Příkaz spustí sestavení aplikace, výsledek se odešle do větve
 *gh-pages*, která je nastavená jako výchozí větev pro GitHub Pages.
