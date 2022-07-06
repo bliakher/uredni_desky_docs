@@ -26,7 +26,7 @@ může tedy zobrazit pouze ty desky, které jsou daným úřadem zveřejněné v
 
 Právní formy poskytovatelů zjišťujeme z údajů uvedených v [Registru práv a povinností](https://www.szrcr.cz/cs/registr-prav-a-povinnosti). Poskytovatelé ostatních právních forem, nebo poskytovatelé, u kterých nelze zjistit formu jsou v kategorii ostatní.
 
-Pro fitrování desek použijte panel `Vyberte právní formu poskytovatele`. Nechte vybrané pouze ty právní formy, jejichž poskytovatele chcete vyfiltrovat.
+Pro filtrování desek použijte panel `Vyberte právní formu poskytovatele`. Nechte vybrané pouze ty právní formy, jejichž poskytovatele chcete vyfiltrovat.
 
 V úředních deskách je také možné vyhledávat na základě názvu desky nebo jména poskytovatele pomocí formuláře pro vyhledávání.
 
@@ -55,9 +55,9 @@ Pokud v distribuci desky chybí některé doporučené atributy, je zde vypsané
 
 #### Statistiky
 
-V této části se zobrazují souhrné statistiky výsledků validace a poskytovatelů. Část Statistiky je rozdělená na 2 záložky - Validace a Poskytovatelé.
+V této části se zobrazují souhrnné statistiky výsledků validace a poskytovatelů. Část Statistiky je rozdělená na 2 záložky - Validace a Poskytovatelé.
 
-V záložce Validace jsou zobrazeny souhrné výsledky validace v textové podobě a na koláčovém grafu.
+V záložce Validace jsou zobrazeny souhrnné výsledky validace v textové podobě a na koláčovém grafu.
 Jsou zde také seznamy desek, které obsahují nedostatky, ze kterých je možné se prokliknout na detail jejich validace.
 
 V záložce Poskytovatelé je statistika poskytovatelů. Je zde zobrazeno, pro jednotlivé právní formy, kolik je celkem orgánů dané právní formy a kolik z nich poskytuje data ze svých úředních desek jako otevřená data. Pro největší skupiny poskytovatelů je toto zobrazeno na koláčových grafech a pro ostatní skupiny v textovém seznamu.
