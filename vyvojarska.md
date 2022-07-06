@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Vývojářská dokumentace
+title: Vývojářská
 permalink: /vyvojarska/
 ---
 

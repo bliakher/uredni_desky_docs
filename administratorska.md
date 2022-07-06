@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Administrátorská dokumentace
+title: Administrátorská
 permalink: /administratorska/
 ---
 

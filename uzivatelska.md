@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Uživatelská dokumentace
+title: Uživatelská
 permalink: /uzivatelska/
 ---
 
