@@ -32,12 +32,19 @@ V úředních deskách je také možné vyhledávat na základě názvu desky ne
 
 Ze seznamu je možné přejít na detail úřední desky zmáčknutím tlačítka `Zobrazit informace`. V detailu desky se zobrazují informace z dané úřední desky, ve kterých je možné vyhledávat podle názvu s použitím formuláře na vyhledávání. 
 
+Příklad seznamu, kde jsou vyfiltrované pouze úřední desky týkající se Prahy od poskytovatelů s právními formami obec, městská část nebo kraj:
+
+![seznam](assets/seznam.png)
+
 
 #### Mapa
 
 V této části jsou úřední desky zobrazené na mapě ČR. Úřední desky jsou rozdělené podle poskytovatelů, kteří zveřejnili data v NKOD. Poskytovatel je na mapě označen bodem, který je zbarvený podle právní formy poskytovatele. Legenda k barvám je umístěná nad mapou.
 
 Při kliknutí na bod na mapě se pod mapou zobrazí název daného poskytovatele a všechny jeho úřední desky. Ze seznamu desek je opět možné přejít do detailu desky.
+
+Příklad zobrazení desky úřadu městské části Praha 13 z mapy:
+![mapa](./assets/mapa.png)
 
 #### Validace
 
@@ -46,11 +53,20 @@ Při kliknutí na bod na mapě se pod mapou zobrazí název daného poskytovatel
 Výsledky validace jsou znázorněné tabulkou. Každý řádek tabulky představuje shrnutí výsledku validace jedné úřední desky.
 Řádek obsahuje název desky a jejího poskytovatele, informaci o tom, jestli je možné stáhnout distribuci s daty desky, jestli data obsahují všechny doporučené atributy a počet informací na desce.
 
+Níže je příklad tabulky s výsledky validace, kde jsou vyfiltrované pouze úřední desky městských částí. Řádky s deskou, kde není  možné stáhnout distribuci jsou obarvené červeně, a řádky desek, kde chybí některé doporučené atributy jsou obarvené žlutě pro větší přehlednost.
+![validace](./assets/validace.png)
+
 Z tabulky je možné se prokliknout na detail validace. Je zde vysvětleno, jakým způsobem se validuje a jaký je význam jednotlivých doporučených atributů (v části `Jak validujeme?`).
 
-Pokud distribuci desky není možné stáhnout, zobrazí se v detailu chybová hláška získaná při stahování a seznam nejčastějších příčin, které tento problém způsobují s odkazy na další informace o problému.
+Pokud distribuci desky není možné stáhnout, zobrazí se v detailu chybová hláška získaná při stahování a seznam nejčastějších příčin, které tento problém způsobují s odkazy na další informace o problému jako vidíme na dalším obrázku.
+
+![validace-detail-cerveny](./assets/validace_detail_cerveny.png)
 
 Pokud v distribuci desky chybí některé doporučené atributy, je zde vypsané, které to jsou. Pokud se jedná o doporučené atributy informací, zobrazí se v záložce  `Informace s chybějícími atributy` seznam všech informací s nedostatky, kde u každé informace je uvedeno, které atributy chybí.
+
+Na následujícím příkladu validace desky úřadu městské části Praha 5 si můžeme všimnout, že v distribuci chybí doporučený atribut `provozovatel` a v 10 informacích na desce z celkem 144 chybí doporučený atribut `relevantní_do`. Můžeme si prohlédnout, o které informace se jedná.
+
+![validace-detail-zluty](./assets/validace_detail_zluty.png)
 
 
 #### Statistiky
@@ -60,5 +76,14 @@ V této části se zobrazují souhrnné statistiky výsledků validace a poskyto
 V záložce Validace jsou zobrazeny souhrnné výsledky validace v textové podobě a na koláčovém grafu.
 Jsou zde také seznamy desek, které obsahují nedostatky, ze kterých je možné se prokliknout na detail jejich validace.
 
+Příklad validační statistiky vidíme zde:
+
+![statistika-validace](./assets/statistika_validace.png)
+
 V záložce Poskytovatelé je statistika poskytovatelů. Je zde zobrazeno, pro jednotlivé právní formy, kolik je celkem orgánů dané právní formy a kolik z nich poskytuje data ze svých úředních desek jako otevřená data. Pro největší skupiny poskytovatelů je toto zobrazeno na koláčových grafech a pro ostatní skupiny v textovém seznamu.
 
+Níže vidíme část statistiky poskytovatelů, konkrétně grafy pro městské části, kraje a organizační složky státu. Pod nimi jsou 2 seznamy, v prvním jsou poskytovatelé ostatních právních forem. Můžeme si všimnout, že pro 86 poskytovatelů se nepodařilo zjistit jejich právní forma, což nejspíše znamená, že u tito poskytovatelé nemají svoji právní formu uvedenou v [Registru práv a povinností](https://www.szrcr.cz/cs/registr-prav-a-povinnosti), odkud data o poskytovatelích získáváme.
+
+Ve druhém seznamu jsou právní formy, které nemají žádného poskytovatele úředních desek. U každé formy je uvedený celkový počet orgánů této právní formy.
+
+![statistika-poskytovatele](./assets/statistika_poskytovatele.png)
