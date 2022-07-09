@@ -12,9 +12,15 @@ Repozitář projektu <https://github.com/bliakher/uredni_desky> obsahuje 2
 složky --- *aplikace* a *dokumentace*. Veškerý zdrojový kód aplikace je
 ve složce *aplikace*.
 
-K sestavení a nasazení je použit správce balíčků [npm](https://www.npmjs.com/). Soubor
+K sestavení a nasazení je použit správce balíčků [npm](https://www.npmjs.com/) společně s prostředím [Create React App](https://www.npmjs.com/package/create-react-app), které umožňuje také spuštění aplikace ve vývojovém prostředí pomocí [Node.js](https://nodejs.org/en/about/). 
+
+Pro použití šablony Create React App je potřeba npm verze 5.6 nebo vyšší a Node.js verze 14 nebo vyšší. V projektu jsme používali npm verze 8.3 a Node verze 16.13.
+
+Soubor
 *package.json* obsahuje konfiguraci balíčků, se kterými aplikace
 pracuje, a nastavení příkazů pro sestavení a nasazení aplikace.
+
+
 
 #### Sestavení
 
@@ -44,7 +50,7 @@ platformě GitHub a názvu repozitáře, v našem případě
 <https://bliakher.github.io/uredni_desky>. V konfiguraci *package.json*
 je URL nastaveno jako domovská stránka aplikace.
 
-Toto nastavení využívá při sestavení prostředí Create React App (viz ),
+Toto nastavení využívá při sestavení prostředí Create React App,
 které nastaví dané URL jako kořenové URL aplikace, což je potřeba pro
 správné fungování routování v aplikaci.
 
