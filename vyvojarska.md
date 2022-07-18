@@ -8,7 +8,7 @@ permalink: /vyvojarska/
 
 V této části je popsaná struktura a fungování aplikace.
 
-Dokumentaci vygenerovanou službou Doxygen z komentářů ke zdrojovému kódu je možné zobrazit zde.
+Dokumentaci vygenerovanou službou Doxygen z komentářů ke zdrojovému kódu je možné zobrazit [zde](https://bliakher.github.io/uredni_desky_docs/doxygen).
 
 ### OFN pro úřední desky
 
