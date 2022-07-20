@@ -8,7 +8,7 @@ permalink: /vyvojarska/
 
 V této části je popsaná struktura a fungování aplikace.
 
-Dokumentaci vygenerovanou službou Doxygen z komentářů ke zdrojovému kódu je možné zobrazit [zde](https://bliakher.github.io/uredni_desky_docs/doxygen).
+Dokumentaci vygenerovanou nástrojem [TypeDoc](https://typedoc.org) z komentářů ke zdrojovému kódu je možné zobrazit [zde](https://bliakher.github.io/uredni_desky_docs/typedoc).
 
 ### OFN pro úřední desky
 
@@ -41,6 +41,7 @@ Aplikace využívá [SPARQL endpoint](https://linked.cuzk.cz.opendata.cz/sparql)
 
 Repozitář: <https://github.com/bliakher/uredni_desky>
 
+
 ```
 ├── README.md
 ├── aplikace
@@ -57,7 +58,6 @@ Repozitář: <https://github.com/bliakher/uredni_desky>
 │   │   ├── App.css
 │   │   ├── App.test.tsx
 │   │   ├── App.tsx
-│   │   ├── Utils.tsx
 │   │   ├── index.css
 │   │   ├── index.tsx
 │   │   ├── model
@@ -67,15 +67,22 @@ Repozitář: <https://github.com/bliakher/uredni_desky>
 │   │   │   ├── cancelablePromise.ts
 │   │   │   └── dataset.ts
 │   │   ├── pages
+│   │   │   ├── About.tsx
 │   │   │   ├── BulletinController.tsx
-│   │   │   ├── Home.tsx
 │   │   │   ├── Layout.tsx
 │   │   │   ├── List.tsx
 │   │   │   ├── Map.tsx
 │   │   │   ├── NoPage.tsx
+│   │   │   ├── Utils.tsx
+│   │   │   ├── componentInterfaces.ts
 │   │   │   ├── detail
 │   │   │   │   ├── Detail.tsx
 │   │   │   │   └── InfoCards.tsx
+│   │   │   ├── forms
+│   │   │   │   ├── CheckboxGroup.tsx
+│   │   │   │   ├── FinderForm.tsx
+│   │   │   │   ├── ShowDatasetButton.tsx
+│   │   │   │   └── SimplePaging.tsx
 │   │   │   ├── statistics
 │   │   │   │   ├── ProviderStatistics.tsx
 │   │   │   │   ├── Statistics.tsx
@@ -85,12 +92,12 @@ Repozitář: <https://github.com/bliakher/uredni_desky>
 │   │   │       └── ValidationDetail.tsx
 │   │   ├── services
 │   │   │   └── query.ts
+│   │   ├── setupTests.ts
 │   │   └── statni_znak.png
 │   └── tsconfig.json
 └── dokumentace
     └── use_cases
         └── ...
-
 ```
 
 Repozitář je rozdělený do 2 složek - *aplikace* a *dokumentace*. Ve složce *dokumentace* jsou pouze diagramy případů užití aplikace.
