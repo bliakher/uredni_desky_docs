@@ -139,7 +139,7 @@ Třída `DatasetStore` ze souboru `DatasetStore.ts` představuje uložiště, kt
 
 #### Prezentační vrstva a kontroler
 
-Třetí částí je kontrolor a prezenční vrstva. Prezenční vrstva vizualizuje data
+Třetí částí je kontrolor a prezentační vrstva. Prezentační vrstva vizualizuje data
 z modelu a vytváří uživatelské rozhraní. Kontrolor na základě podnětů z uživatelského rozhraní vyvolává změny v modelu, které se pak promítají do změn ve
 vizualizaci prezenční vrstvy.
 
@@ -149,17 +149,34 @@ Ve složce `detail/` jsou komponenty pro vizualizaci detailu úřední desky, s 
 
 Dále představíme některé důležité komponenty v aplikaci.
 
+##### Layout
+
 Komponenta `Layout` (soubor `Layout.tsx`) určuje rozložení stránky, kdy v horní části obrazovky je umístěn navigační panel a další obsah, v podobě ostatních komponent se renderuje uvnitř komponenty `Layout`.
+
+##### BulletinController
 
 Komponenta `BulletinController` se stará o filtrování úředních desek. Komponenta má v sobě instanci třídy `DatasetStore`, která ji umožní získat data z úředních desek jako seznam objektů `BulletinData`. Komponenta obsahuje 2 formuláře, jeden pro vyhledávání v deskách a druhý pro filtrování desek podle právní formy poskytovatele. 
 
-Komponenta na základě uživatelských vstupů z formulářů vyfiltruje ze seznamu všech `BulletinData` pouze ty odpovídající a tento vyfiltrovaný seznam předá svojí vnitřní komponentě, která seznam vizualizuje. Formuláře pro filtrování uvnitř komponenty `BulletinController`  je tedy možné použít pro více způsobů vizualizace.
+Komponenta na základě uživatelských vstupů z formulářů vyfiltruje ze seznamu všech `BulletinData` pouze ty odpovídající uživatelským vstupům a tento vyfiltrovaný seznam předá svojí vnitřní komponentě, která seznam vizualizuje. Formuláře pro filtrování uvnitř komponenty `BulletinController`  je tedy možné použít pro více způsobů vizualizace.
 
-V aplikaci jsou dvě části, které využívají `BulletinController` - seznam úředních desek a tabulka s výsledky validace desek. 
+V aplikaci jsou dvě části, které využívají `BulletinController` - seznam úředních desek a tabulka s výsledky validace desek.
 
-Seznam představuje komponenta `BulletinList` (soubor `List.tsx`), která obsahuje `BulletinController`, kterému se pro vizualizaci úředních desek předá vnitřní komponenta `BulletinCards`.
+Aby bylo možné uchovat obsah filtrovacích formulářů i po přechodu do detailu desky nebo detailu validace, a pak návratu zpět, musí být stav formulářů z komponenty `BulletinController` být uložený o úroveň výš, tedy v komponentě `App`.
 
-Tabulka s výsledky validace se renderuje z komponenty `Validation` (soubor `validation/Validation.tsx`). Využívá `BulletinController`, pro vizualizaci úředních desek jako výsledků jejich validace se předá vnitřní komponenta `ValidationTable`.
+Komponenta `App` ve svém stavu uchovává nastavení filtrovacích formulářů zvlášť pro seznam desek a zvlášť pro validaci. Dovnitř těchto komponent pak hodnoty předá jako React `props` (vstupy) společně s callbacky, kterými je možné hodnoty přenastavit.
+
+Když uživatel interaguje s formuláři v seznamu nebo validaci, zavoláním callacku se přenastaví stav komponenty `App`, což spustí render. Zároveň, o přechodu uživatele do jiného modulu a návratu zpět si aplikace pamatuje volby filtrování.
+
+`BulletinController` slouží jako obálka s formuláři pro filtrování. To jak jsou úřední desky uvnitř formuláře zobrazené je určené tím, jaké komponenty do `BulletinController` předáme jako `props`. `BulletinController` bere na vstupu 2 komponenty - komponentu s hlavičkou a komponentu, která umí vizualizovat desky v podobě `BuletinData`.
+
+##### List
+
+V případě seznamu se komponentě `BulletinController` předá jako hlavička `BulletinListHeader` a pro zobrazení desek komponenta `BulletinCards`. Obě komponenty jsou ze souboru `List.tsx`.
+
+##### Validation
+
+Pro validační modul se komponentě `BulletinController` předá jako hlavička `ValidationHeader` a pro zobrazení desek komponenta `ValidationTable`, která zobrazuje desky jako tabulku s výsledky validace. Tyto komponenty jsou ze souboru `validation/Validation.tsx`
+
 
 ### React
 
