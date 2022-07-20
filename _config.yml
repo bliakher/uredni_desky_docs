@@ -30,7 +30,6 @@ header_pages:
   - index.markdown
   - uzivatelska.md
   - vyvojarska.md
-  - doxygen.html
   - administratorska.md
   - about.markdown
 
