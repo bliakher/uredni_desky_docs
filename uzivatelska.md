@@ -36,7 +36,7 @@ Příklad seznamu, kde jsou vyfiltrované pouze úřední desky týkající se P
 
 Ze seznamu je možné přejít na detail úřední desky zmáčknutím tlačítka `Zobrazit informace`. V detailu desky se zobrazují informace z dané úřední desky, ve kterých je možné vyhledávat podle názvu s použitím formuláře na vyhledávání. 
 
-Níže vidíme příklad detailu úřední desky Krajského ředitelství policie hl. m. Prahy. Pokud deska již není relevantní, tedy datum relevance již uplynulo, je zvýrazněné červeně.
+Níže vidíme příklad detailu úřední desky Krajského ředitelství policie hl. m. Prahy. Pokud informace na desce již není relevantní, tedy datum relevance již uplynulo, je datum zvýrazněné červeně.
 
 ![detail](./assets/detail.png)
 
